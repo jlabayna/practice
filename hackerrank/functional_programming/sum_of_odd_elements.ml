@@ -7,7 +7,7 @@ Returns: Number
 *)
 let rec odd_sum ls =
     match ls with
-    | hd::tl -> if hd mod 2 = 1 then hd + odd_sum tl else odd_sum tl
+    | hd::tl -> if hd mod 2 != 0 then hd + odd_sum tl else odd_sum tl
     | [] -> 0
 
 let rec read_in () =
