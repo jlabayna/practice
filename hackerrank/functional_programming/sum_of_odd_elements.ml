@@ -10,9 +10,7 @@ Parameters: [list]
 Returns: Number
 *)
 let rec odd_sum ls =
-    match ls with
-    | hd::tl -> if hd mod 2 != 0 then hd + odd_sum tl else odd_sum tl
-    | [] -> 0
+    List.fold_left (fun acc x -> if x mod 2 != 0 then acc + x el`se acc) 0 ls
 
 let () =
     print_int (odd_sum (read_in ()))
